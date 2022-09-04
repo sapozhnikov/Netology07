@@ -10,6 +10,9 @@ public class Main {
 
         for (int i = 0; i < loremIpsum.length(); i++) {
             Character currentChar = loremIpsum.charAt(i);
+            if (!Character.isLetter(currentChar)) {
+                continue;
+            }
             if (charStat.containsKey(currentChar)) {
                 Integer stat = charStat.get(currentChar);
                 charStat.put(currentChar, stat + 1);
